@@ -11,9 +11,10 @@ public class DebugLogger {
         this.enabled = enabled;
     }
     // Note if the Object is a custom class override toString
-    public void log(String scope, String label, Object value){
+    public void log(String label, Object value){
         if(enabled){
-            System.out.println("["+scope+"] : "+label+ " : "+value );
+            System.out.println("########################################");
+            System.out.println(label+ " : "+value );
         }
     }
 }
