@@ -3,8 +3,22 @@ package roo;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-import java.util.Objects;
 
+/**
+ * Give a  List of Object.
+ * Object can be
+ * a) nested List
+ * b) String
+ * c) Integer
+ *
+ * Return only alternate elements from the list
+ * if it is a String return it as Uppercase
+ *
+ * else return the element
+ *
+ *  // Sample [1, "hello" ,["4", "world", "abc"]], [[[-1]]], "foo", [["xyz", "bar"]]]
+ *  // Output [1 , 4, "ABC", "FOO", "BAR"]
+ */
 public class PrintAlternateNode {
 
     public List<Object> printAlternateNode(List<Object> inputList) {
@@ -33,6 +47,9 @@ public class PrintAlternateNode {
 
     public Object extractLeafNode(Object item) {
         if (item instanceof String curr) {
+            // not necessary but was a follow-up by the interviewer
+            // whatif the input integer is passed as a string
+            // integer can be negative
             if (curr.matches("-?//d")) {
                 return Integer.parseInt(curr);
             } else {
