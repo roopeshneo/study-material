@@ -78,6 +78,7 @@ public class KnightsTour {
     public static void main(String[] args){
         int n = 5; // Change N to test different board sizes
         System.out.println("Total Knight's Tours for " + n + "x" + n + ": " + countTotalTours(n));
+        assert countTotalTours(n) == 1728 : "1728 possible combination for a 5X5 board";
     }
 
 }
