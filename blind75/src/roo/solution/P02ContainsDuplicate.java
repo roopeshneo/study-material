@@ -59,7 +59,7 @@ public class P02ContainsDuplicate {
     public static void main(String[] args) {
         // more than one adds to 8
         var input = List.of(2, 3, -1, 0, 9, 4, 5, -1, 5);
-        int[] nums = input.stream().mapToInt(i -> i).toArray();
+        int[] nums = input.stream().mapToInt(Integer::intValue).toArray();
         var target = 8;
         var p02ContainsDuplicate = new P02ContainsDuplicate();
         long startTime = System.currentTimeMillis();
