@@ -27,7 +27,7 @@ public class P15MaximumSubarray {
     public int maxSubArray(int[] nums){
         int curSum = 0, maxSoFar = 0;
         for(int n : nums){
-            if(curSum < 0) curSum = 0;
+            if(curSum < 0) curSum = 0; // do not forget
             curSum += n;
             maxSoFar = Math.max(curSum, maxSoFar);
         }
